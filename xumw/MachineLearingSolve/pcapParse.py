@@ -16,7 +16,7 @@ from sklearn.model_selection  import train_test_split
 from sklearn.naive_bayes import BernoulliNB
 
 
-f = open('../../pcaptest_20190516/0.pcap', 'rb')
+f = open('../../../pcaptest_20190516/0.pcap', 'rb')
 pcap = dpkt.pcap.Reader(f)
 
 
@@ -49,17 +49,6 @@ print("pcap dst port type num:", len(port_list))
 
 port_official_csv = pd.read_csv("./service-names-port-numbers.csv")
 
-# print(port_official_csv['Service Name'])
-# print(port_official_csv['Port Number'])
-# print(port_official_csv['Port Number'][14148])
-# print(np.nan)
-# if port_official_csv['Port Number'][14148] is np.nan:
-#     print("yes")
-
-# print(port_official_csv['Service Name'][26])
-# print(np.nan)
-# if port_official_csv['Service Name'][26] is np.nan:
-#     print("yes")
 port_official_useful = {}
 for i in range(0, len(port_official_csv)):
     if (port_official_csv['Service Name'][i] is not np.nan) and  (port_official_csv['Port Number'][i] is not np.nan):
@@ -67,10 +56,6 @@ for i in range(0, len(port_official_csv)):
 
 print("--------------------------------------")
 print("official useful port number:",len(port_official_useful))
-
-
-
-
 
 app_list = []
 for i in range(0, len(port_list)):
@@ -85,3 +70,10 @@ print("label set num:",len(app_list))
 
 for i in range(0, len(app_list)):
 	print(port_list[i], app_list[i])
+
+portTrain, portTest, appTrain, appTest = train_test_split(port_list, app_list, test_size = 0.2, random_state = 42)
+
+print(len(portTrain))
+print(len(portTest))
+print(len(appTrain))
+print(len(appTest))
