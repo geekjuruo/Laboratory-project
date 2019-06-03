@@ -5,6 +5,7 @@ import scapy
 from scapy.all import *
 from scapy.utils import PcapReader
 import numpy as np 
+import binascii
 import pandas as pd
 import random
 import csv
@@ -16,7 +17,7 @@ from sklearn.model_selection  import train_test_split
 from sklearn.naive_bayes import BernoulliNB
 
 
-f = open('../../pcaptest_20190516/0.pcap', 'rb')
+f = open('../../../pcaptest_20190516/0.pcap', 'rb')
 pcap = dpkt.pcap.Reader(f)
 
 
@@ -28,22 +29,35 @@ def inet_to_str(inet):
 
 port_list = []
 num = 0
+total = 0
 for ts,buf in pcap:
-    num += 1
-    print(num)
+    # num += 1
+    # print(num)
     ethData = dpkt.ethernet.Ethernet(buf) # 物理层
     ipData = ethData.data # 网络层
     transData = ipData.data # 传输层
     appData = transData.data # 应用层
     
-    ip_src = inet_to_str(ipData.src)
-    ip_dst = inet_to_str(ipData.dst)
-    print( "ip_src", ip_src)
-    print("ip_dsr",ip_dst)
-    print("src_port", transData.sport)
-    print("dst_port", transData.dport)
-    port_list.append(transData.dport) # 通过dst port分析
+    if(len(appData) != 0):
+        print(len(appData))
+        # total += 1
+        # print(repr(ethData))
+        # print("----------ip-----------")
+        # print(repr(ipData))
+        # print("------------trans---------")
+        # print(repr(transData))
+        # print("-----------app----------")
+        # print(repr(appData))
+#     ip_src = inet_to_str(ipData.src)
+#     ip_dst = inet_to_str(ipData.dst)
+# #     print( "ip_src", ip_src)
+# #     print("ip_dsr",ip_dst)
+# #     print("src_port", transData.sport)
+# #     print("dst_port", transData.dport)
 
+    # port_list.append(transData.dport) # 通过dst port分析
+
+print(total)
 print("--------------------------------------")
 print("pcap dst port type num:", len(port_list))
 
