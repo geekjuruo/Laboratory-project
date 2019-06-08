@@ -39,9 +39,9 @@ if __name__=="__main__":
     print("--------------------------------------")
     print("official useful port number:",len(port_official_useful))
 
-    for i in range(0, 1):
+    for i in range(0, 30):
         print("start read " + str(i) + " pcap")
-        pcap_path = '../../../pcaptest_20190516/' + str(i) + '.pcap'
+        pcap_path = '../../pcaptest_20190516/' + str(i) + '.pcap'
         f = open(pcap_path, 'rb')
         pcap = dpkt.pcap.Reader(f)
         for ts, buf in pcap:
