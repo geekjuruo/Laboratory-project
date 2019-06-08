@@ -29,7 +29,17 @@ if __name__=="__main__":
     flows_feature = []      # 存放流对象特征的列表，列表套列表，里面的每一个列表代表每一个流的特征
     flows_label = []        # 存放流对象应用类型标签的列表
     index = 0
-    for i in range(0, 30):
+    port_official_csv = pd.read_csv("./service-names-port-numbers.csv")
+
+    port_official_useful = {}
+    for i in range(0, len(port_official_csv)):
+        if (port_official_csv['Service Name'][i] is not np.nan) and  (port_official_csv['Port Number'][i] is not np.nan):
+            port_official_useful[port_official_csv['Port Number'][i]] = port_official_csv['Service Name'][i]
+
+    print("--------------------------------------")
+    print("official useful port number:",len(port_official_useful))
+
+    for i in range(0, 1):
         print("start read " + str(i) + " pcap")
         pcap_path = '../../../pcaptest_20190516/' + str(i) + '.pcap'
         f = open(pcap_path, 'rb')
@@ -54,7 +64,6 @@ if __name__=="__main__":
                 flows[triple][index].append(port_dst) # 特征 端口号
                 flows[triple][index].append(len(buf)) # 包长度
                 flows[triple][index].append(len(appData)) # 有效负载长度
-
                 validPacketNum += 1
             else:
                 flows[triple][index] = []
@@ -99,9 +108,18 @@ if __name__=="__main__":
         feature.append(timeGapMean)
 
         flows_feature.append(feature)
-    
+
+        x = str(flowGroup[keys[0]][1])
+        if (x in port_official_useful.keys()):
+            flows_label.append(port_official_useful[x]) 
+        else:
+            flows_label.append('unknown')
 
     print(flows_feature)
+    print(flows_label)
     featureName=['PacketTotalNum','DurationTime','PacketLenMean', 'PayloadLenMean', 'TimeGapMean']
-    df=pd.DataFrame(columns=featureName,data=flows_feature)
-    df.to_csv('flows_feature.csv')
+    df1=pd.DataFrame(columns=featureName,data=flows_feature)
+    df1.to_csv('flows_feature.csv')
+    labelName=['label']
+    df2=pd.DataFrame(columns=labelName,data=flows_label)
+    df2.to_csv('flows_label.csv')
