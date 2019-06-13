@@ -130,9 +130,9 @@ int main(int argc,char** argv){
     }
     printf("Successfully Captured %s.\n",device);
 
-    struct bpf_program filter;
-    pcap_compile(pcap_handle,&filter,"tcp",1,0);
-    pcap_setfilter(pcap_handle,&filter);
+    //struct bpf_program filter;
+    //pcap_compile(pcap_handle,&filter,"tcp",1,0);
+    //pcap_setfilter(pcap_handle,&filter);
 
     /*open pcap write output file*/
     printf("---------packet--------\n");
