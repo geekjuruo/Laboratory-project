@@ -114,10 +114,24 @@ if __name__=="__main__":
         if (x in port_official_useful.keys()):
             flows_label.append(port_official_useful[x]) 
         else:
-            flows_label.append('unknown')
+            if (flowGroup[keys[0]][1] < 10000):
+                flows_label.append('unknown1')
+            elif (flowGroup[keys[0]][1] < 20000):
+                flows_label.append('unknown2')
+            elif (flowGroup[keys[0]][1] < 30000):
+                flows_label.append('unknown3')
+            elif (flowGroup[keys[0]][1] < 40000):
+                flows_label.append('unknown4')
+            elif (flowGroup[keys[0]][1] < 50000):
+                flows_label.append('unknown5')
+            elif (flowGroup[keys[0]][1] < 60000):
+                flows_label.append('unknown6')
+            elif (flowGroup[keys[0]][1] < 70000):
+                flows_label.append('unknown7')
+            
 
-    print(flows_feature)
-    print(flows_label)
+    print(len(flows_feature))
+    print(len(flows_label))
     featureName=['PacketTotalNum','DurationTime','PacketLenMean', 'PayloadLenMean', 'TimeGapMean']
     df1=pd.DataFrame(columns=featureName,data=flows_feature)
     df1.to_csv('flows_feature.csv')
