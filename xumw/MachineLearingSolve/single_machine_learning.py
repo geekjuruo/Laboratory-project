@@ -22,6 +22,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection  import train_test_split
 
+# 基于端口号的分类。单分类器分类
 
 f = open('../../../pcaptest_20190516/0.pcap', 'rb')
 pcap = dpkt.pcap.Reader(f)

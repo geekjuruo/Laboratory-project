@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 __author__ = 'Charles Guo'
+# 用握手信息来进行分流
 
 import dpkt
 import socket

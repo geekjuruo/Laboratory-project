@@ -9,6 +9,7 @@ import pandas as pd
 
 from flow import *
 
+# 不用握手信息进行分流，并且进行特征提取
 def inet_to_str(inet):
     try:
         return socket.inet_ntop(socket.AF_INET,inet)

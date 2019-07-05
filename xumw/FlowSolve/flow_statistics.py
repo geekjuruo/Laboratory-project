@@ -4,6 +4,8 @@ import csv
 import dpkt
 import socket
 
+# 进行流特征统计分析
+
 def inet_to_str(inet):
     try:
         return socket.inet_ntop(socket.AF_INET,inet)

@@ -16,6 +16,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection  import train_test_split
 from sklearn.naive_bayes import BernoulliNB
 
+# 解析pcap获取有用信息
+
 
 f = open('../../../pcaptest_20190516/0.pcap', 'rb')
 pcap = dpkt.pcap.Reader(f)
