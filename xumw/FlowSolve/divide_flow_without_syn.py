@@ -67,7 +67,7 @@ if __name__=="__main__":
                     flows[triple][index].append(len(buf)) # 包长度
                     flows[triple][index].append(len(appData)) # 有效负载长度
                     validPacketNum += 1
-                else:
+                elif len(flows[triple]) < 5:
                     flows[triple][index] = []
                     flows[triple][index].append(ts) # 特征 包时间戳
                     flows[triple][index].append(port_dst) # 特征 端口号
@@ -115,20 +115,7 @@ if __name__=="__main__":
         if (x in port_official_useful.keys()):
             flows_label.append(port_official_useful[x]) 
         else:
-            if (flowGroup[keys[0]][1] < 10000):
-                flows_label.append('unknown1')
-            elif (flowGroup[keys[0]][1] < 20000):
-                flows_label.append('unknown2')
-            elif (flowGroup[keys[0]][1] < 30000):
-                flows_label.append('unknown3')
-            elif (flowGroup[keys[0]][1] < 40000):
-                flows_label.append('unknown4')
-            elif (flowGroup[keys[0]][1] < 50000):
-                flows_label.append('unknown5')
-            elif (flowGroup[keys[0]][1] < 60000):
-                flows_label.append('unknown6')
-            elif (flowGroup[keys[0]][1] < 70000):
-                flows_label.append('unknown7')
+            flows_label.append('unknown')
             
 
     print(len(flows_feature))

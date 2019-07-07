@@ -1,0 +1,267 @@
+\ProvidesPackage{abmath}[2006/04/12]
+\RequirePackage{maybemath}
+\RequirePackage{braket}
+\RequirePackage{xspace}
+
+%% --------------------------------------------------------------
+
+\DeclareRobustCommand{\mymath}[1]{\ensuremath{\maybebmsf{#1}}}
+\DeclareRobustCommand{\MathUpright}[1]{\mymath{\mathrm{#1}}}
+\DeclareRobustCommand{\MathText}[1]{\ensuremath{\text{#1}}}
+\DeclareRobustCommand{\RHS}{\MathText{right hand side}\xspace}
+\DeclareRobustCommand{\LHS}{\MathText{left hand side}\xspace}
+
+%% Groupings
+\DeclareRobustCommand{\parenths}[1]{\mymath{\left({#1}\right)}}
+\DeclareRobustCommand{\braces}[1]{\mymath{\left\{{#1}\right\}}}
+\DeclareRobustCommand{\angles}[1]{\mymath{\left\langle{#1}\right\rangle}}
+\DeclareRobustCommand{\sqbracs}[1]{\mymath{\left[{#1}\right]}}
+\DeclareRobustCommand{\mods}[1]{\mymath{\left\lvert{#1}\right\rvert}}
+\DeclareRobustCommand{\modsq}[1]{\mymath{\mods{#1}^2}}
+\DeclareRobustCommand{\dblmods}[1]{\mymath{\left\lVert{#1}\right\rVert}}
+% legacy names
+\DeclareRobustCommand{\bigparenths}[1]{\parenths{#1}}
+\DeclareRobustCommand{\bigbraces}[1]{\braces{#1}}
+\DeclareRobustCommand{\bigangles}[1]{\angles{#1}}
+\DeclareRobustCommand{\bigsqbracs}[1]{\sqbracs{#1}}
+\DeclareRobustCommand{\bigmods}[1]{\mods{#1}}
+\DeclareRobustCommand{\bigmodsq}[1]{\modsq{#1}}
+\DeclareRobustCommand{\bigdblmods}[1]{\dblmods{#1}}
+
+%% Misc
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\sign}{sgn}
+\DeclareMathOperator{\li}{li}
+\DeclareMathOperator{\trace}{Tr}
+\DeclareRobustCommand{\expparenths}[1]{\mymath{\exp{\!\parenths{#1}}}}
+\DeclareRobustCommand{\expbraces}[1]{\mymath{\exp{\!\braces{#1}}}}
+\DeclareRobustCommand{\expOf}[1]{\expparenths{#1}} % generalise to have braces specifier 1st arg
+\DeclareRobustCommand{\eexp}[1]{\mymath{e^{#1}}}
+\DeclareRobustCommand{\plusquad}{\mymath{\oplus}}
+\DeclareRobustCommand{\logOf}[1]{\log\!\parenths{#1}}
+\DeclareRobustCommand{\lnOf}[1]{\ln\!\parenths{#1}}
+\DeclareRobustCommand{\liOf}[1]{\li\!\parenths{#1}}
+\DeclareRobustCommand{\signOf}[1]{\sign\!\parenths{#1}}
+\DeclareRobustCommand{\diagOf}[1]{\diag\!\parenths{#1}}
+\DeclareRobustCommand{\traceOf}[1]{\trace\!\parenths{#1}}
+
+%% For use outside math mode
+\let\@oldpm\pm
+\DeclareRobustCommand{\pm}{\mymath{\,\@oldpm\,}}
+\let\@oldmp\mp
+\DeclareRobustCommand{\mp}{\mymath{\,\@oldmp\,}}
+\let\@oldVert\vert
+\DeclareRobustCommand{\vert}{\mymath{\@oldVert\,}}
+\let\@oldTo\to
+\DeclareRobustCommand{\to}{\mymath{\,\@oldTo\,}}
+\let\@oldsim\sim
+\DeclareRobustCommand{\sim}{\mymath{\,\@oldsim\,}}
+\let\@oldimplies\implies
+\DeclareRobustCommand{\implies}{\mymath{\@oldimplies}}
+\DeclareRobustCommand{\To}{\mymath{\@oldimplies}}
+\let\@oldtimes\times
+\DeclareRobustCommand{\times}{\mymath{\,\@oldtimes\,}}
+\let\@oldbra\bra
+\DeclareRobustCommand{\bra}[1]{\mymath{\@oldbra{#1}}}
+\let\@oldket\ket
+\DeclareRobustCommand{\ket}[1]{\mymath{\@oldket{#1}}}
+\let\@oldbraket\braket
+\DeclareRobustCommand{\braket}[1]{\mymath{\@oldbraket{#1}}}
+
+%% Re-define Greek letters for use outside math mode, too
+\let\@Oldalpha\alpha%
+\let\@Oldbeta\beta%
+\let\@Oldgamma\gamma%
+\let\@Olddelta\delta%
+\let\@Oldepsilon\epsilon%
+\let\@Oldvarepsilon\varepsilon%
+\let\@Oldzeta\zeta%
+\let\@Oldeta\eta%
+\let\@Oldtheta\theta%
+\let\@Oldvartheta\vartheta%
+\let\@Oldiota\iota%
+\let\@Oldkappa\kappa%
+\let\@Oldlambda\lambda%
+\let\@Oldmu\mu%
+\let\@Oldnu\nu%
+\let\@Oldxi\xi%
+\let\@Oldpi\pi%
+\let\@Oldvarpi\varpi%
+\let\@Oldrho\rho%
+\let\@Oldvarrho\varrho%
+\let\@Oldsigma\sigma%
+\let\@Oldvarsigma\varsigma%
+\let\@Oldtau\tau%
+\let\@Oldupsilon\upsilon%
+\let\@Oldphi\phi%
+\let\@Oldvarphi\varphi%
+\let\@Oldchi\chi%
+\let\@Oldpsi\psi%
+\let\@Oldomega\omega%
+\renewcommand{\alpha}{\mymath{\@Oldalpha}\xspace}%
+\renewcommand{\beta}{\mymath{\@Oldbeta}\xspace}%
+\renewcommand{\gamma}{\mymath{\@Oldgamma}\xspace}%
+\renewcommand{\delta}{\mymath{\@Olddelta}\xspace}%
+\renewcommand{\epsilon}{\mymath{\@Oldepsilon}\xspace}%
+\renewcommand{\varepsilon}{\mymath{\@Oldvarepsilon}\xspace}%
+\renewcommand{\zeta}{\mymath{\@Oldzeta}\xspace}%
+\renewcommand{\eta}{\mymath{\@Oldeta}\xspace}%
+\renewcommand{\theta}{\mymath{\@Oldtheta}\xspace}%
+\renewcommand{\vartheta}{\mymath{\@Oldvartheta}\xspace}%
+\renewcommand{\iota}{\mymath{\@Oldiota}\xspace}%
+\renewcommand{\kappa}{\mymath{\@Oldkappa}\xspace}%
+\renewcommand{\lambda}{\mymath{\@Oldlambda}\xspace}%
+\renewcommand{\mu}{\mymath{\@Oldmu}\xspace}%
+\renewcommand{\nu}{\mymath{\@Oldnu}\xspace}%
+\renewcommand{\xi}{\mymath{\@Oldxi}\xspace}%
+\renewcommand{\pi}{\mymath{\@Oldpi}\xspace}%
+\renewcommand{\varpi}{\mymath{\@Oldvarpi}\xspace}%
+\renewcommand{\rho}{\mymath{\@Oldrho}\xspace}%
+\renewcommand{\varrho}{\mymath{\@Oldvarrho}\xspace}%
+\renewcommand{\sigma}{\mymath{\@Oldsigma}\xspace}%
+\renewcommand{\varsigma}{\mymath{\@Oldvarsigma}\xspace}%
+\renewcommand{\tau}{\mymath{\@Oldtau}\xspace}%
+\renewcommand{\upsilon}{\mymath{\@Oldupsilon}\xspace}%
+\renewcommand{\phi}{\mymath{\@Oldphi}\xspace}%
+\renewcommand{\varphi}{\mymath{\@Oldvarphi}\xspace}%
+\renewcommand{\chi}{\mymath{\@Oldchi}\xspace}%
+\renewcommand{\psi}{\mymath{\@Oldpsi}\xspace}%
+\renewcommand{\omega}{\mymath{\@Oldomega}\xspace}%
+
+%% Commands
+\DeclareRobustCommand{\isabout}{\sim\,}
+\DeclareRobustCommand{\isAbout}{\isabout}
+\DeclareRobustCommand{\about}{\mymath{\@oldsim\!\,}}
+\DeclareRobustCommand{\goesto}{\mymath{ \, \Rightarrow \, }}
+\DeclareRobustCommand{\isdefined}{ \equiv }
+\DeclareRobustCommand{\isdefinedas}{ \equiv }
+%\DeclareRobustCommand{\expectation}[1]{\mymath{ \mathcal{E}\lbrack#1\rbrack }}
+\DeclareRobustCommand{\FT}[1]{\mymath{ \mathcal{FT}\lbrack {#1} \rbrack }}
+\DeclareRobustCommand{\LT}[1]{\mymath{ \mathcal{LT}\lbrack {#1} \rbrack }}
+\DeclareRobustCommand{\operand}{\mymath{ \bullet }}
+\DeclareRobustCommand{\scalesas}{\mymath{ \propto }}
+\DeclareRobustCommand{\powerten}[1]{\mymath{ \power{10}{#1} }}
+
+
+%% Parenthetic operations
+\DeclareRobustCommand{\ofOrder}[1]{\mymath{ \mathcal{O}\parenths{#1} }}
+\DeclareRobustCommand{\orderof}[1]{ \ofOrder{#1} }
+\DeclareRobustCommand{\isOfOrder}[1]{\mymath{ \sim \ofOrder{#1} }}
+\DeclareRobustCommand{\expectationOf}[1]{\mymath{ \mathscr{E}\bracs{#1} }}
+\DeclareRobustCommand{\DeltaOf}[1]{\mymath{ \Delta\!\mspace{2.0mu}{#1} }}
+\DeclareRobustCommand{\deltaOf}[1]{\mymath{ \delta\!\mspace{2.0mu}{#1} }}
+\DeclareRobustCommand{\argOf}[1]{\mymath{ \arg\!\parenths{#1} }}
+\DeclareRobustCommand{\sinOf}[1]{\mymath{ \sin\!\parenths{#1} }}
+\DeclareRobustCommand{\cosOf}[1]{\mymath{ \cos\!\parenths{#1} }}
+\DeclareRobustCommand{\tanOf}[1]{\mymath{ \tan\!\parenths{#1} }}
+\DeclareRobustCommand{\sinhOf}[1]{\mymath{ \sinh\!\parenths{#1} }}
+\DeclareRobustCommand{\coshOf}[1]{\mymath{ \cosh\!\parenths{#1} }}
+\DeclareRobustCommand{\tanhOf}[1]{\mymath{ \tanh\!\parenths{#1} }}
+\DeclareRobustCommand{\arcsinOf}[1]{\mymath{ \arcsin\!\parenths{#1} }}
+\DeclareRobustCommand{\arccosOf}[1]{\mymath{ \arccos\!\parenths{#1} }}
+\DeclareRobustCommand{\arctanOf}[1]{\mymath{ \arctan\!\parenths{#1} }}
+\DeclareRobustCommand{\arcsinhOf}[1]{\mymath{ \arcsinh\!\parenths{#1} }}
+\DeclareRobustCommand{\arccoshOf}[1]{\mymath{ \arccosh\!\parenths{#1} }}
+\DeclareRobustCommand{\arctanhOf}[1]{\mymath{ \arctanh\!\parenths{#1} }}
+
+%% Numbers
+\DeclareRobustCommand{\nhalfs}[1]{\mymath{\frac{#1}{2}\,}\xspace}
+\DeclareRobustCommand{\nthirds}[1]{\mymath{\frac{#1}{3}\,}\xspace}
+\DeclareRobustCommand{\nquarters}[1]{\mymath{\frac{#1}{4}\,}\xspace}
+\DeclareRobustCommand{\half}{\nhalfs{1}\xspace}
+\DeclareRobustCommand{\onethird}{\nthirds{1}\xspace}
+\DeclareRobustCommand{\onequarter}{\nquarters{1}\xspace}
+\DeclareRobustCommand{\oneover}[1]{\mymath{\frac{1}{#1}}\xspace}
+\DeclareRobustCommand{\I}{\mymath{\imath}}
+\let\@oldRe\Re
+\let\@oldIm\Im
+\DeclareRobustCommand{\Im}{\mymath{ \@oldIm{}\mathfrak{m} }\xspace}
+\DeclareRobustCommand{\Re}{\mymath{ \@oldRe{}\mathfrak{e}\mspace{3mu} }\xspace}
+\DeclareRobustCommand{\ImaginaryPart}[1]{\mymath{ \,\Im\!\,\braces{#1} }\xspace}
+\DeclareRobustCommand{\RealPart}[1]{\mymath{ \,\Re\!\braces{#1} }\xspace}
+\DeclareRobustCommand{\percent}{\%\xspace}
+
+%% Groups
+\DeclareRobustCommand{\group}[1]{\mymath{\mayberm{#1}}}
+\DeclareRobustCommand{\Ugroup}[1]{\group{U}\parenths{#1}}
+\DeclareRobustCommand{\SUgroup}[1]{\group{S}\Ugroup{#1}}
+\DeclareRobustCommand{\Ogroup}[1]{\group{O}\parenths{#1}}
+\DeclareRobustCommand{\SOgroup}[1]{\group{S}\Ogroup{#1}}
+\DeclareRobustCommand{\Egroup}[1]{\group{E}_{#1}}
+\DeclareRobustCommand{\directsum}{\mymath{\oplus}}
+\DeclareRobustCommand{\directprod}{\mymath{\otimes}}
+\DeclareRobustCommand{\covers}{\mymath{\supset}}
+\DeclareRobustCommand{\exclude}{\mymath{\backslash}}
+
+%% Physics
+\DeclareRobustCommand{\commutator}[2]{\sqbracs{{#1},{#2}}}
+\DeclareRobustCommand{\anticommutator}[2]{\braces{{#1},{#2}}}
+
+%% Tensors
+\DeclareRobustCommand{\Kronecker}{\mymath{\delta}\xspace} % have to specify indices separately now
+\DeclareRobustCommand{\LeviCivita}{\mymath{\epsilon}\xspace} % have to specify indices separately now
+
+%% Vectors, tuples and sets
+\DeclareRobustCommand{\cross}{\mymath{\times}\xspace}
+\DeclareRobustCommand{\bvec}[1]{\mymath{\bm{#1}}\xspace}
+\DeclareRobustCommand{\colset}[1]{\mymath{\begin{Bmatrix}#1\end{Bmatrix}}\xspace}
+\DeclareRobustCommand{\coltuple}[1]{\mymath{\begin{pmatrix}#1\end{pmatrix}}\xspace}
+\DeclareRobustCommand{\colvector}[1]{\mymath{\begin{pmatrix}#1\end{pmatrix}}\xspace}
+\DeclareRobustCommand{\colthreevec}[3]{\mymath{\begin{pmatrix}#1\\ #2\\ #3\end{pmatrix}}\xspace}
+\DeclareRobustCommand{\rowset}[1]{\braces{#1}\xspace}
+\DeclareRobustCommand{\rowtuple}[1]{\parenths{#1}\xspace}
+\DeclareRobustCommand{\rowvector}[1]{\parenths{#1}\xspace}
+\DeclareRobustCommand{\rowthreevec}[3]{\parenths{{#1}, {#2}, {#3}}\xspace}
+
+%% Ranges
+\DeclareRobustCommand{\rangeSS}[1]{\parenths{#1}\xspace}
+\DeclareRobustCommand{\rangeSH}[1]{\left({#1}\right]\xspace}
+\DeclareRobustCommand{\rangeHS}[1]{\left[{#1}\right)\xspace}
+\DeclareRobustCommand{\rangeHH}[1]{\sqbracs{#1}\xspace}
+\DeclareRobustCommand{\softrange}[1]{\rangeSS{#1}}
+\DeclareRobustCommand{\hardrange}[1]{\rangeHH{#1}}
+
+%% Matrix
+\DeclareRobustCommand{\boldmatrix}[1]{\mymath{\bm{\mathrm{#1}}}\xspace}
+\DeclareRobustCommand{\transposeT}{\MathUpright{T}\,}
+\DeclareRobustCommand{\hermitianT}{\dagger}
+\DeclareRobustCommand{\twomatrix}[2]{\mymath{\begin{pmatrix}#1\\ #2\end{pmatrix}}\xspace}
+\DeclareRobustCommand{\threematrix}[3]{\mymath{\begin{pmatrix}#1\\ #2\\ #3\end{pmatrix}}\xspace}
+
+%% Differentials
+\DeclareRobustCommand{\diff}[1]{\mymath{\mathrm{d} #1}}
+\DeclareRobustCommand{\pdiff}[1]{\mymath{\partial #1}}
+\DeclareRobustCommand{\dByd}[2]{\mymath{ \frac{\diff{#1}}{\diff{#2}} }}
+\DeclareRobustCommand{\pdByd}[2]{\mymath{ \frac{\pdiff{#1}}{\pdiff{#2}} }}
+\DeclareRobustCommand{\DeltaVec}[1]{\mymath{\boldsymbol{\Delta}\mathbf{#1}}}
+\DeclareRobustCommand{\DeltaN}[1]{\mymath{\Delta #1}}
+\DeclareRobustCommand{\deltaVec}[1]{\mymath{\boldsymbol{\delta}\mathbf{#1}}}
+\DeclareRobustCommand{\deltaN}[1]{\mymath{\delta #1}}
+\DeclareRobustCommand{\d}[1]{\mymath{\mathrm{d}#1}}
+\DeclareMathOperator{\curl}{curl} % curl
+%\DeclareMathOperator{\div}{div} % div
+\DeclareRobustCommand{\gradCross}[1]{\mymath{\nabla \cross #1}} % curl
+\DeclareRobustCommand{\gradDot}[1]{\mymath{\nabla \dot #1}} % div
+\DeclareRobustCommand{\Laplacian}{\mymath{\backslash}}
+\DeclareRobustCommand{\dAlembertian}{\mymath{\box^{2}}} % I like it with power of 2 attached :-)
+\DeclareRobustCommand{\exclude}{\mymath{\backslash}}
+
+
+%% Statistics and probability
+\DeclareRobustCommand{\mean}[1]{\angles{#1}}
+\DeclareRobustCommand{\given}{\mymath{\vert}}
+\DeclareRobustCommand{\probabilityP}{\mymath{\mayberm{p}}}
+\DeclareRobustCommand{\probability}[1]{\mymath{\probabilityP\parenths{#1}}}
+
+
+%% Principle value integral signs (from UK TeX FAQ)
+\def\Xint#1{\mathchoice
+   {\XXint\displaystyle\textstyle{#1}}%
+   {\XXint\textstyle\scriptstyle{#1}}%
+   {\XXint\scriptstyle\scriptscriptstyle{#1}}%
+   {\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+   \!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$}
+     \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+\def\ddashint{\Xint=}
+\def\dashint{\Xint-}

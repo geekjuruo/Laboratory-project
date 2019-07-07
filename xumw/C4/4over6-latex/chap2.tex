@@ -1,0 +1,37 @@
+\chapter{项目内容}
+
+\section{客户端}
+
+\subsubsection{客户端前台}
+前台是java语言的显示界面
+\begin{itemize}
+    \item 进行网络检测并获取上联物理接口IPV6地址
+    \item 启动后台线程
+    \item 开启定时器刷新界面
+    \item 界面显示网络状态
+    \item 开启安卓VPN服务
+\end{itemize}
+\subsubsection{客户端后台}
+后台是C语言客户端与4over6隧道服务器之间的数据交互
+\begin{itemize}
+    \item 连接服务器
+    \item 获取下联虚接口IPV4地址并通过管道传到前台
+    \item VPN程序通过打开/dev/获取前台传送到后台的虚接口描述符
+    \item 读写虚接口
+    \item 对数据进行解封装
+    \item 通过IPV6套接字与4over6隧道服务器进行数据交互
+    \item 实现保活机制，定时给服务器发送keeplive消息
+\end{itemize}
+
+\section{服务器端}
+服务端在linux环境下运行，主要有下面几个功能：
+\begin{itemize}
+    \item 创建IPV6 TCP套接字，监听服务器和客户端之间的数据通信
+    \item 维护虚接口，实现对虚接口的读写操作
+    \item 维护IPV4地址池，实现为新连接客户端分配IPV4地址
+    \item 维护客户信息表，保存IPV4地址与IPV6套接字之间的映射关系
+    \item 读取客户端从IPV6 TCP套接字发送来的数据，实现对系统的控制消息和数据消息的处理
+    \item 实现对数据消息的解封装，并写入虚接口
+    \item 实现对虚接口接收到的数据报文进行封装，通过IPV6套接字发送给客户端
+    \item 实现保活机制，监测客户端是否在线，并且定时给客户端发送keeplive消息
+\end{itemize}

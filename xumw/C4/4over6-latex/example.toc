@@ -1,0 +1,41 @@
+\babel@toc {english}{}
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}项目简介}{1}
+\contentsline {section}{\numberline {1.1}项目概述}{1}
+\contentsline {section}{\numberline {1.2}客户端项目概述}{1}
+\contentsline {section}{\numberline {1.3}服务器项目概述}{1}
+\contentsline {chapter}{\numberline {2}项目原理}{1}
+\contentsline {section}{\numberline {2.1}面向Android终端的隧道原理}{1}
+\contentsline {section}{\numberline {2.2}项目网络拓扑}{2}
+\contentsline {section}{\numberline {2.3}安卓VPN Service原理}{2}
+\contentsline {section}{\numberline {2.4}NDK 和 JNI}{3}
+\contentsline {chapter}{\numberline {3}项目内容}{5}
+\contentsline {section}{\numberline {3.1}客户端}{5}
+\contentsline {subsubsection}{客户端前台}{5}
+\contentsline {subsubsection}{客户端后台}{5}
+\contentsline {section}{\numberline {3.2}服务器端}{6}
+\contentsline {chapter}{\numberline {4}项目设计与实现}{7}
+\contentsline {section}{\numberline {4.1}客户端前台流程设计}{10}
+\contentsline {section}{\numberline {4.2}客户端前台具体实现}{11}
+\contentsline {subsection}{\numberline {4.2.1}UI主界面}{11}
+\contentsline {subsection}{\numberline {4.2.2}MainActivity}{12}
+\contentsline {subsection}{\numberline {4.2.3}MyVpnervice}{12}
+\contentsline {subsection}{\numberline {4.2.4}NetChecker}{12}
+\contentsline {section}{\numberline {4.3}客户端后台流程设计}{12}
+\contentsline {section}{\numberline {4.4}客户端后台具体实现}{14}
+\contentsline {subsection}{\numberline {4.4.1}JNI}{14}
+\contentsline {subsection}{\numberline {4.4.2}后台线程}{14}
+\contentsline {section}{\numberline {4.5}服务器端流程设计}{15}
+\contentsline {subsection}{\numberline {4.5.1}主进程循环}{15}
+\contentsline {subsection}{\numberline {4.5.2}读取虚接口线程}{16}
+\contentsline {subsection}{\numberline {4.5.3}keeplive线程}{17}
+\contentsline {section}{\numberline {4.6}服务器端具体实现}{18}
+\contentsline {subsection}{\numberline {4.6.1}NAT}{19}
+\contentsline {subsection}{\numberline {4.6.2}epoll和socket}{19}
+\contentsline {chapter}{\numberline {5}项目中遇到的问题}{21}
+\contentsline {section}{\numberline {5.1}客户端遇到的问题}{21}
+\contentsline {section}{\numberline {5.2}服务器端遇到的问题}{21}
+\contentsline {chapter}{\numberline {6}运行方式及效果}{23}
+\contentsline {section}{\numberline {6.1}客户端运行方式}{23}
+\contentsline {section}{\numberline {6.2}服务器运行方式}{23}
+\contentsline {section}{\numberline {6.3}最终项目效果}{24}

@@ -1,0 +1,184 @@
+\ProvidesPackage{abhep}[2005/01/17]
+
+\RequirePackage{amsmath}
+\RequirePackage{cancel}
+\RequirePackage{abhepexpt}
+\RequirePackage{hepnicenames}
+\RequirePackage{hepunits}
+\RequirePackage{maybemath}
+\RequirePackage{abmath}
+
+
+%C++ macro (to be moved!)
+\DeclareRobustCommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\textbf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\textbf +}}
+\def\CCtwo{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\textbf ++}}}
+\DeclareRobustCommand{\Rplus}{\protect\nolinebreak\hspace{-.07em}\protect\raisebox{.25ex}{\small\textbf{+}}}
+\DeclareRobustCommand{\Cpp}{C\Rplus\Rplus\xspace}
+
+\DeclareRobustCommand{\rescatter}{re-scatter\xspace}
+\DeclareRobustCommand{\electroweak}{electro-weak\xspace}
+\DeclareRobustCommand{\StandardModel}{Standard Model\xspace}
+\DeclareRobustCommand{\SM}{Standard Model\xspace}
+
+% General lagrangian formalism
+\DeclareRobustCommand{\matrixelementM}{\mymath{ \mathcal{M} }\xspace}
+\DeclareRobustCommand{\matrixelementA}{\mymath{ \mathcal{A} }\xspace}
+
+\DeclareRobustCommand{\Amplitude}[1]{\mymath{
+    \mathcal{A}%
+    \begingroup%
+    \def\@empty{}%
+    \def\@arg{#1}%
+    \ifx\@arg\@empty{}\else\parenths{#1}\fi%
+    \endgroup%
+}}
+
+% also want Rate and BranchingRatio
+\DeclareRobustCommand{\Lagrangian}{\mymath{ \mathcal{L} }\xspace}
+\DeclareRobustCommand{\Hamiltonian}{\mymath{ \mathcal{H} }\xspace}
+\DeclareRobustCommand{\lagrangian}{\Lagrangian}
+\DeclareRobustCommand{\hamiltonian}{\Hamiltonian}
+\DeclareRobustCommand{\RenormalisationScale}{\mymath{ \mu }\xspace}
+
+\DeclareRobustCommand{\adjointField}[1]{\mymath{ \bar{#1} }\xspace}
+\DeclareRobustCommand{\scalarField}{\mymath{ \phi }\xspace}
+\DeclareRobustCommand{\spinorField}{\mymath{ \psi }\xspace}
+
+\DeclareRobustCommand{\pathD}{\mymath{ \mathcal{D} }\xspace}
+\DeclareRobustCommand{\VEV}{VEV\xspace}
+\DeclareRobustCommand{\QCD}{QCD\xspace}
+\DeclareRobustCommand{\EW}{EW\xspace}
+\DeclareRobustCommand{\EM}{EM\xspace}
+\DeclareRobustCommand{\PDG}{PDG\xspace}
+
+% covariant derivative
+% covariant vectors, tensors, vectors
+
+% Common Feynman rules
+%% photon propagator
+%% external vector boson
+%% Z,W propagator
+
+\DeclareRobustCommand{\pseudorapidity}{pseudo-rapidity\xspace}
+
+% Rates and measurements
+\DeclareRobustCommand{\BR}[1]{\mymath{%
+    \def\empty{}%
+    \def\thearg{#1}%
+    \mathcal{B}%
+    \ifx\thearg\empty{}\else{(\HepProcess{#1})}\fi%
+}\xspace}
+
+\DeclareRobustCommand{\efficiency}[1]{\mymath{
+    \def\empty{}%
+    \def\thearg{#1}%
+    \varepsilon%
+    \ifx\thearg\empty{}\else{(\text{#1})}\fi%
+}\xspace}
+
+\DeclareRobustCommand{\purity}{\mymath{p}\xspace}
+\DeclareRobustCommand{\luminosity}{\mymath{\mathcal{L}}\xspace}
+\DeclareRobustCommand{\sqrtS}{\mymath{\sqrt{s}}\xspace}
+
+%% CP violation
+%% \DeclareRobustCommand{\opC}{\mymath{\maybebm{\mathcal{C}}}\xspace}
+%% \DeclareRobustCommand{\opP}{\mymath{\maybebm{\mathcal{P}}}\xspace}
+%% \DeclareRobustCommand{\opT}{\mymath{\maybebm{\mathcal{T}}}\xspace}
+\DeclareRobustCommand{\opC}{\texorpdfstring{\mymath{\maybebm{\mathcal{C}}}}{C}\xspace}
+\DeclareRobustCommand{\opP}{\texorpdfstring{\mymath{\maybebm{\mathcal{P}}}}{P}\xspace}
+\DeclareRobustCommand{\opT}{\texorpdfstring{\mymath{\maybebm{\mathcal{T}}}}{T}\xspace}
+\DeclareRobustCommand{\opCP}{\mymath{\opC\opP}\xspace}
+\DeclareRobustCommand{\opCPT}{\mymath{\opC\opP\opT}\xspace}
+%% and for convenience...
+\DeclareRobustCommand{\CP}{\opCP}
+\DeclareRobustCommand{\CPT}{\opCPT}
+%% symmetry violation shorthands
+\DeclareRobustCommand{\CPv}{\mymath{\cancel{\opCP}}\xspace}
+\DeclareRobustCommand{\CPViolation}{\mymath{\opCP\text{-violation}}\xspace}
+\DeclareRobustCommand{\CPTv}{\mymath{\cancel{\opCPT}}\xspace}
+\DeclareRobustCommand{\CPTViolation}{\mymath{\opCPT\text{-violation}}\xspace}
+
+
+%% Important names (of effects, params, theories etc.) and suchlike
+\DeclareRobustCommand{\Cabibbo}{\ensuremath{\text{Cabibbo}}\xspace}
+\DeclareRobustCommand{\Maskawa}{\ensuremath{\text{Maskawa}}\xspace}
+\DeclareRobustCommand{\Kobayashi}{\ensuremath{\text{Kobayashi}}\xspace}
+\DeclareRobustCommand{\Jarlskog}{\ensuremath{\text{Jarlskog}}\xspace}
+\DeclareRobustCommand{\Sakharov}{\ensuremath{\text{Sakharov}}\xspace}
+\DeclareRobustCommand{\Majorana}{\ensuremath{\text{Majorana}}\xspace}
+\DeclareRobustCommand{\Planck}{\ensuremath{\text{Planck}}\xspace}
+\DeclareRobustCommand{\Dirac}{\ensuremath{\text{Dirac}}\xspace}
+\DeclareRobustCommand{\Weyl}{\ensuremath{\text{Weyl}}\xspace}
+
+%% Theories
+\DeclareRobustCommand{\SUSY}{\ensuremath{\text{SUSY}}\xspace}
+\DeclareRobustCommand{\AMSB}{\ensuremath{\text{AMSB}}\xspace}
+\DeclareRobustCommand{\mSUGRA}{\ensuremath{\text{mSUGRA}}\xspace}
+
+\DeclareRobustCommand{\JarlskogParam}{\mymath{J_{\CP}}\xspace}
+\DeclareRobustCommand{\thetaCabibbo}{\mymath{\maybebm{\theta_c}}}
+
+%% CKM matrix stuff
+\DeclareRobustCommand{\Vckm}{\mymath{ \boldmatrix{V}_{\!\mathrm{CKM}} }\xspace}
+\DeclareRobustCommand{\VckmFull}{\mymath{%
+\begin{pmatrix}
+ \Vud & \Vus & \Vub \\
+ \Vcd & \Vcs & \Vcb \\
+ \Vtd & \Vts & \Vtb \\
+\end{pmatrix}
+}}
+
+\DeclareRobustCommand{\alphaCKM}{\mymath{\alpha}\xspace}
+\DeclareRobustCommand{\betaCKM}{\mymath{\beta}\xspace}
+\DeclareRobustCommand{\gammaCKM}{\mymath{\gamma}\xspace}
+\DeclareRobustCommand{\CkmElementConj}[2]{\mymath{V_{{#1}{#2}}^{*}}\xspace}
+\DeclareRobustCommand{\CkmElement}[2]{\mymath{V_{{#1}{#2}}^{\phantom{*}}}\xspace}
+\DeclareRobustCommand{\Vud}{\CkmElement{\mathrm{u}}{\mathrm{d}}}
+\DeclareRobustCommand{\Vus}{\CkmElement{\mathrm{u}}{\mathrm{s}}}
+\DeclareRobustCommand{\Vub}{\CkmElement{\mathrm{u}}{\mathrm{b}}}
+\DeclareRobustCommand{\Vcd}{\CkmElement{\mathrm{c}}{\mathrm{d}}}
+\DeclareRobustCommand{\Vcs}{\CkmElement{\mathrm{c}}{\mathrm{s}}}
+\DeclareRobustCommand{\Vcb}{\CkmElement{\mathrm{c}}{\mathrm{b}}}
+\DeclareRobustCommand{\Vtd}{\CkmElement{\mathrm{t}}{\mathrm{d}}}
+\DeclareRobustCommand{\Vts}{\CkmElement{\mathrm{t}}{\mathrm{s}}}
+\DeclareRobustCommand{\Vtb}{\CkmElement{\mathrm{t}}{\mathrm{b}}}
+\DeclareRobustCommand{\VudConj}{\CkmElementConj{\mathrm{u}}{\mathrm{d}}}
+\DeclareRobustCommand{\VusConj}{\CkmElementConj{\mathrm{u}}{\mathrm{s}}}
+\DeclareRobustCommand{\VubConj}{\CkmElementConj{\mathrm{u}}{\mathrm{b}}}
+\DeclareRobustCommand{\VcdConj}{\CkmElementConj{\mathrm{c}}{\mathrm{d}}}
+\DeclareRobustCommand{\VcsConj}{\CkmElementConj{\mathrm{c}}{\mathrm{s}}}
+\DeclareRobustCommand{\VcbConj}{\CkmElementConj{\mathrm{c}}{\mathrm{b}}}
+\DeclareRobustCommand{\VtdConj}{\CkmElementConj{\mathrm{t}}{\mathrm{d}}}
+\DeclareRobustCommand{\VtsConj}{\CkmElementConj{\mathrm{t}}{\mathrm{s}}}
+\DeclareRobustCommand{\VtbConj}{\CkmElementConj{\mathrm{t}}{\mathrm{b}}}
+
+%% CKM element pairing for unitarity relations
+\newlength{\CKMPairWidth}
+\settowidth{\CKMPairWidth}{\Vtd\VtbConj}
+\DeclareRobustCommand{\@Vbox}[1]{\makebox[\CKMPairWidth]{#1}}
+\DeclareRobustCommand{\VCkmPair}[2]{\ensuremath{\@Vbox{{#1}{#2}}}}
+
+%% Theory acronyms
+\DeclareRobustCommand{\SCET}{SCET\xspace}
+\DeclareRobustCommand{\HQET}{HQET\xspace}
+\DeclareRobustCommand{\CKM}{CKM\xspace}
+\DeclareRobustCommand{\KM}{KM\xspace}
+\DeclareRobustCommand{\BSM}{BSM\xspace}
+\DeclareRobustCommand{\FCNC}{FCNC\xspace}
+
+%% Typical analysis concepts
+\DeclareRobustCommand{\PV}{\MathUpright{PV}}
+\DeclareRobustCommand{\IP}{\MathUpright{IP}}
+\DeclareRobustCommand{\pT}{\mymath{p_\MathUpright{T}}\xspace}
+\DeclareRobustCommand{\missingpT}{\mymath{\cancel{\pT}}\xspace}
+\DeclareRobustCommand{\Et}{\mymath{E_\MathUpright{T}}\xspace}
+\DeclareRobustCommand{\missingEt}{\mymath{\cancel{\Et}}\xspace}
+\DeclareRobustCommand{\p}{\mymath{p}\xspace}
+\DeclareRobustCommand{\chisq}{\mymath{\chi^2}\xspace}
+\DeclareRobustCommand{\tuple}[1]{\ensuremath{#1}-tuple\xspace}
+\DeclareRobustCommand{\tuples}[1]{\ensuremath{#1}-tuples\xspace}
+\DeclareRobustCommand{\ntuple}{\tuple{n}\xspace}
+\DeclareRobustCommand{\ntuples}{\tuples{n}\xspace}
+\DeclareRobustCommand{\dataset}{data set\xspace}
+\DeclareRobustCommand{\cutset}{cut set\xspace}
+\DeclareRobustCommand{\CoM}{CoM\xspace}

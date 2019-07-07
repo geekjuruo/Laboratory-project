@@ -1,0 +1,70 @@
+\usepackage{xspace}
+\usepackage{tikz}
+\usepackage{morefloats,subfig,afterpage}
+\usepackage{mathrsfs} % script font
+\usepackage{verbatim}
+
+%% Using Babel allows other languages to be used and mixed-in easily
+%\usepackage[ngerman,english]{babel}
+\usepackage[english]{babel}
+\selectlanguage{english}
+
+%% Citation system tweaks
+\usepackage{cite}
+% \let\@OldCite\cite
+% \renewcommand{\cite}[1]{\mbox{\!\!\!\@OldCite{#1}}}
+
+%% Maths
+% TODO: rework or eliminate maybemath
+\usepackage{abmath}
+\DeclareRobustCommand{\mymath}[1]{\ensuremath{\maybebmsf{#1}}}
+% \DeclareRobustCommand{\parenths}[1]{\mymath{\left({#1}\right)}\xspace}
+% \DeclareRobustCommand{\braces}[1]{\mymath{\left\{{#1}\right\}}\xspace}
+% \DeclareRobustCommand{\angles}[1]{\mymath{\left\langle{#1}\right\rangle}\xspace}
+% \DeclareRobustCommand{\sqbracs}[1]{\mymath{\left[{#1}\right]}\xspace}
+% \DeclareRobustCommand{\mods}[1]{\mymath{\left\lvert{#1}\right\rvert}\xspace}
+% \DeclareRobustCommand{\modsq}[1]{\mymath{\mods{#1}^2}\xspace}
+% \DeclareRobustCommand{\dblmods}[1]{\mymath{\left\lVert{#1}\right\rVert}\xspace}
+% \DeclareRobustCommand{\expOf}[1]{\mymath{\exp{\!\parenths{#1}}}\xspace}
+% \DeclareRobustCommand{\eexp}[1]{\mymath{e^{#1}}\xspace}
+% \DeclareRobustCommand{\plusquad}{\mymath{\oplus}\xspace}
+% \DeclareRobustCommand{\logOf}[1]{\mymath{\log\!\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\lnOf}[1]{\mymath{\ln\!\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\ofOrder}[1]{\mymath{\mathcal{O}\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\SOgroup}[1]{\mymath{\mathup{SO}\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\SUgroup}[1]{\mymath{\mathup{SU}\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\Ugroup}[1]{\mymath{\mathup{U}\parenths{#1}}\xspace}
+% \DeclareRobustCommand{\I}[1]{\mymath{\mathrm{i}}\xspace}
+% \DeclareRobustCommand{\colvector}[1]{\mymath{\begin{pmatrix}#1\end{pmatrix}}\xspace}
+\DeclareRobustCommand{\Rate}{\mymath{\Gamma}\xspace}
+\DeclareRobustCommand{\RateOf}[1]{\mymath{\Gamma}\parenths{#1}\xspace}
+
+%% High-energy physics stuff
+\usepackage{abhep}
+\usepackage{hepnames}
+\usepackage{hepunits}
+\DeclareRobustCommand{\arXivCode}[1]{arXiv:#1}
+\DeclareRobustCommand{\CP}{\ensuremath{\mathcal{CP}}\xspace}
+\DeclareRobustCommand{\CPviolation}{\CP-violation\xspace}
+\DeclareRobustCommand{\CPv}{\CPviolation}
+\DeclareRobustCommand{\LHCb}{LHCb\xspace}
+\DeclareRobustCommand{\LHC}{LHC\xspace}
+\DeclareRobustCommand{\LEP}{LEP\xspace}
+\DeclareRobustCommand{\CERN}{CERN\xspace}
+\DeclareRobustCommand{\bphysics}{\Pbottom-physics\xspace}
+\DeclareRobustCommand{\bhadron}{\Pbottom-hadron\xspace}
+\DeclareRobustCommand{\Bmeson}{\PB-meson\xspace}
+\DeclareRobustCommand{\bbaryon}{\Pbottom-baryon\xspace}
+\DeclareRobustCommand{\Bdecay}{\PB-decay\xspace}
+\DeclareRobustCommand{\bdecay}{\Pbottom-decay\xspace}
+\DeclareRobustCommand{\BToKPi}{\HepProcess{ \PB \to \PK \Ppi }\xspace}
+\DeclareRobustCommand{\BToPiPi}{\HepProcess{ \PB \to \Ppi \Ppi }\xspace}
+\DeclareRobustCommand{\BToKK}{\HepProcess{ \PB \to \PK \PK }\xspace}
+\DeclareRobustCommand{\BToRhoPi}{\HepProcess{ \PB \to \Prho \Ppi }\xspace}
+\DeclareRobustCommand{\BToRhoRho}{\HepProcess{ \PB \to \Prho \Prho }\xspace}
+\DeclareRobustCommand{\X}{\thesismath{X}\xspace}
+\DeclareRobustCommand{\Xbar}{\thesismath{\overline{X}}\xspace}
+\DeclareRobustCommand{\Xzero}{\HepGenParticle{X}{}{0}\xspace}
+\DeclareRobustCommand{\Xzerobar}{\HepGenAntiParticle{X}{}{0}\xspace}
+\DeclareRobustCommand{\epluseminus}{\Ppositron\!\Pelectron\xspace}
+\DeclareRobustCommand{\protonproton}{\Pproton\APantiproton\xspace}

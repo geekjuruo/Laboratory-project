@@ -1,0 +1,69 @@
+\ProvidesPackage{thesismath}[2005/11/01]
+
+\DeclareRobustCommand{\thesismath}[1]{\ensuremath{\maybebmsf{#1}}}
+\DeclareRobustCommand{\parenths}[1]{\thesismath{\left({#1}\right)}}
+\DeclareRobustCommand{\braces}[1]{\thesismath{\left\{{#1}\right\}}}
+\DeclareRobustCommand{\angles}[1]{\thesismath{\left\langle{#1}\right\rangle}}
+\DeclareRobustCommand{\sqbracs}[1]{\thesismath{\left[{#1}\right]}}
+\DeclareRobustCommand{\mods}[1]{\thesismath{\left\lvert{#1}\right\rvert}}
+\DeclareRobustCommand{\modsq}[1]{\thesismath{\mods{#1}^2}}
+\DeclareRobustCommand{\dblmods}[1]{\thesismath{\left\lVert{#1}\right\rVert}}
+\DeclareRobustCommand{\expOf}[1]{\thesismath{\exp{\!\parenths{#1}}}}
+\DeclareRobustCommand{\eexp}[1]{\thesismath{e^{#1}}}
+\DeclareRobustCommand{\plusquad}{\thesismath{\oplus}}
+\DeclareRobustCommand{\logOf}[1]{\log\!\parenths{#1}}
+\DeclareRobustCommand{\lnOf}[1]{\ln\!\parenths{#1}}
+\DeclareRobustCommand{\ofOrder}[1]{\thesismath{ \mathcal{O}\parenths{#1} }}
+\DeclareRobustCommand{\about}{\thesismath{\sim\!\,}}
+
+%% Vectors, tuples and sets
+\DeclareRobustCommand{\cross}{\thesismath{\times}\xspace}
+\DeclareRobustCommand{\bvec}[1]{\thesismath{\bm{#1}}\xspace}
+\DeclareRobustCommand{\colset}[1]{\thesismath{\begin{Bmatrix}#1\end{Bmatrix}}\xspace}
+\DeclareRobustCommand{\coltuple}[1]{\thesismath{\begin{pmatrix}#1\end{pmatrix}}\xspace}
+\DeclareRobustCommand{\colvector}[1]{\thesismath{\begin{pmatrix}#1\end{pmatrix}}\xspace}
+\DeclareRobustCommand{\colthreevec}[3]{\thesismath{\begin{pmatrix}#1\\ #2\\ #3\end{pmatrix}}\xspace}
+\DeclareRobustCommand{\rowset}[1]{\braces{#1}\xspace}
+\DeclareRobustCommand{\rowtuple}[1]{\parenths{#1}\xspace}
+\DeclareRobustCommand{\rowvector}[1]{\parenths{#1}\xspace}
+\DeclareRobustCommand{\rowthreevec}[3]{\parenths{{#1}, {#2}, {#3}}\xspace}
+
+%% Ranges
+\DeclareRobustCommand{\rangeSS}[1]{\parenths{#1}\xspace}
+\DeclareRobustCommand{\rangeSH}[1]{\left({#1}\right]\xspace}
+\DeclareRobustCommand{\rangeHS}[1]{\left[{#1}\right)\xspace}
+\DeclareRobustCommand{\rangeHH}[1]{\sqbracs{#1}\xspace}
+\DeclareRobustCommand{\softrange}[1]{\rangeSS{#1}}
+\DeclareRobustCommand{\hardrange}[1]{\rangeHH{#1}}
+
+%% Matrix
+\DeclareRobustCommand{\boldmatrix}[1]{\thesismath{\bm{\mathrm{#1}}}\xspace}
+\DeclareRobustCommand{\transposeT}{\MathUpright{T}\,}
+\DeclareRobustCommand{\hermitianT}{\dagger}
+\DeclareRobustCommand{\twomatrix}[2]{\thesismath{\begin{pmatrix}#1\\ #2\end{pmatrix}}\xspace}
+\DeclareRobustCommand{\threematrix}[3]{\thesismath{\begin{pmatrix}#1\\ #2\\ #3\end{pmatrix}}\xspace}
+
+%% Differentials
+\DeclareRobustCommand{\diff}[1]{\thesismath{\mathrm{d} #1}}
+\DeclareRobustCommand{\pdiff}[1]{\thesismath{\partial #1}}
+\DeclareRobustCommand{\dByd}[2]{\thesismath{ \frac{\diff{#1}}{\diff{#2}} }}
+\DeclareRobustCommand{\pdByd}[2]{\thesismath{ \frac{\pdiff{#1}}{\pdiff{#2}} }}
+\DeclareRobustCommand{\DeltaVec}[1]{\thesismath{\boldsymbol{\Delta}\mathbf{#1}}}
+\DeclareRobustCommand{\DeltaN}[1]{\thesismath{\Delta #1}}
+\DeclareRobustCommand{\deltaVec}[1]{\thesismath{\boldsymbol{\delta}\mathbf{#1}}}
+\DeclareRobustCommand{\deltaN}[1]{\thesismath{\delta #1}}
+\DeclareRobustCommand{\d}[1]{\thesismath{\mathrm{d}#1}}
+
+%% Complex numbers
+\DeclareRobustCommand{\I}{\thesismath{\imath}}
+\let\@oldRe\Re
+\let\@oldIm\Im
+\DeclareRobustCommand{\Im}{\thesismath{ \@oldIm{}\mathfrak{m} }\xspace}
+\DeclareRobustCommand{\Re}{\thesismath{ \@oldRe{}\mathfrak{e}\mspace{3mu} }\xspace}
+\DeclareRobustCommand{\ImaginaryPart}[1]{\thesismath{ \,\Im\!\,\braces{#1} }\xspace}
+\DeclareRobustCommand{\RealPart}[1]{\thesismath{ \,\Re\!\braces{#1} }\xspace}
+
+%% Groups
+\DeclareRobustCommand{\group}[1]{\thesismath{\mayberm{#1}}}
+\DeclareRobustCommand{\Ugroup}[1]{\group{U}\parenths{#1}}
+\DeclareRobustCommand{\SUgroup}[1]{\group{S}\Ugroup{#1}}
