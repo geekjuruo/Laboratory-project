@@ -1,0 +1,19 @@
+# ninja log v5
+1	1100	1558340573	CMakeFiles/native-lib.dir/native-lib.cpp.o	64997fd4d6a743e1
+1103	1277	1558340573	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	6899b0cfab57cea5
+5	1177	1558343986	CMakeFiles/native-lib.dir/native-lib.cpp.o	64997fd4d6a743e1
+1177	1490	1558343987	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	6899b0cfab57cea5
+3	875	1558344172	CMakeFiles/native-lib.dir/native-lib.cpp.o	64997fd4d6a743e1
+876	1162	1558344173	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	6899b0cfab57cea5
+3	1885	1558354950	CMakeFiles/native-lib.dir/native-lib.cpp.o	64997fd4d6a743e1
+1886	2338	1558354951	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	6899b0cfab57cea5
+2	1642	1558355942	CMakeFiles/native-lib.dir/native-lib.cpp.o	64997fd4d6a743e1
+1642	2664	1558355943	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	6899b0cfab57cea5
+3	1384	1558356505	CMakeFiles/native-lib.dir/native-lib.cpp.o	64997fd4d6a743e1
+1384	1558	1558356505	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	6899b0cfab57cea5
+38	1378	1558431761	CMakeFiles/native-lib.dir/native-lib.cpp.o	64997fd4d6a743e1
+1378	1622	1558431761	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	6899b0cfab57cea5
+6	1263	1558515114	CMakeFiles/native-lib.dir/native-lib.cpp.o	64997fd4d6a743e1
+1263	1590	1558515114	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	6899b0cfab57cea5
+2	823	1558538421	CMakeFiles/native-lib.dir/native-lib.cpp.o	64997fd4d6a743e1
+823	1171	1558538421	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	6899b0cfab57cea5

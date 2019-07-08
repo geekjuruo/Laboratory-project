@@ -1,0 +1,3 @@
+/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/rebuild_cache.dir
+/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/edit_cache.dir
+/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/native-lib.dir

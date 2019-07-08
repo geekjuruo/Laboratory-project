@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">THU_4over6_VPN</string>
+
+    <!--初始界面-->
+    <string name="logo_name">THU 4over6 VPN</string>
+    <string name="workers">Made By   柳瑞阳、李映辉、曾军</string>
+    <string name="address">服务器 IPV6 地址:</string>
+    <string name="port">服务器端口号:</string>
+    <string name="server_ip">2402:f000:4:72:808::9a47</string>
+    <string name="server_port">5678</string>
+    <string name="local_address">本地 IPV6 地址:</string>
+    <string name="local_ip">您暂时无IPv6访问权限，请检查网络状态</string>
+    <string name="stop_service">断开 VPN</string>
+    <string name="ipv6_addr">IPv6 地址:</string>
+    <string name="quit_button">退出程序</string>
+    <string name="ipv4_addr">IPv4 地址:</string>
+    <string name="receive_pk_info">总共接收数据包:</string>
+    <string name="send_pk_info">总共发送数据包:</string>
+    <string name="down_speed">下载网速:</string>
+    <string name="up_speed">上传网速:</string>
+    <string name="run_time">运行计时:</string>
+    <string name="start_service">连接 VPN</string>
+</resources>

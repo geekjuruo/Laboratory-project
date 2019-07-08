@@ -1,0 +1,17 @@
+# ninja log v5
+0	1299	1558340570	CMakeFiles/native-lib.dir/native-lib.cpp.o	853b62b5771789fc
+1301	1455	1558340571	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/x86_64/libnative-lib.so	a436f6b76c47cef4
+3	1300	1558343984	CMakeFiles/native-lib.dir/native-lib.cpp.o	853b62b5771789fc
+1300	1419	1558343984	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/x86_64/libnative-lib.so	a436f6b76c47cef4
+3	1552	1558344170	CMakeFiles/native-lib.dir/native-lib.cpp.o	853b62b5771789fc
+1552	1667	1558344170	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/x86_64/libnative-lib.so	a436f6b76c47cef4
+3	2824	1558354945	CMakeFiles/native-lib.dir/native-lib.cpp.o	853b62b5771789fc
+2825	3089	1558354946	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/x86_64/libnative-lib.so	a436f6b76c47cef4
+3	1565	1558355939	CMakeFiles/native-lib.dir/native-lib.cpp.o	853b62b5771789fc
+1565	1733	1558355939	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/x86_64/libnative-lib.so	a436f6b76c47cef4
+3	2097	1558356502	CMakeFiles/native-lib.dir/native-lib.cpp.o	853b62b5771789fc
+2097	2213	1558356502	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/x86_64/libnative-lib.so	a436f6b76c47cef4
+2	1802	1558431758	CMakeFiles/native-lib.dir/native-lib.cpp.o	853b62b5771789fc
+1802	1942	1558431758	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/x86_64/libnative-lib.so	a436f6b76c47cef4
+3	1880	1558538418	CMakeFiles/native-lib.dir/native-lib.cpp.o	853b62b5771789fc
+1880	2152	1558538419	/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/build/intermediates/cmake/debug/obj/x86_64/libnative-lib.so	a436f6b76c47cef4

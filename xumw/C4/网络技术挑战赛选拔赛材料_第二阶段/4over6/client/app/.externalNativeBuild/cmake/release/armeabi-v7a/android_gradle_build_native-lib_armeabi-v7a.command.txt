@@ -1,0 +1,8 @@
+Executable : /Users/liuruiyang/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake
+arguments : 
+--build
+/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/.externalNativeBuild/cmake/release/armeabi-v7a
+--target
+native-lib
+jvmArgs : 
+

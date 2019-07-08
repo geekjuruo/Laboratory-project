@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/.externalNativeBuild/cmake/release/armeabi-v7a",
+  "command": "/Users/liuruiyang/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/liuruiyang/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/liuruiyang/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -frtti -fexceptions -Oz -DNDEBUG  -fPIC   -o CMakeFiles/native-lib.dir/native-lib.cpp.o -c /Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/src/main/cpp/native-lib.cpp",
+  "file": "/Users/liuruiyang/Desktop/lry_4over6/THU_4over6_VPN/app/src/main/cpp/native-lib.cpp"
+}
+]
