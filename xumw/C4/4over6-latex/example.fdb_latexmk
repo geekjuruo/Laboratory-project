@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1562385793 "example.xdv" "example.pdf" "example" 1562385796
-  "example.xdv" 1562385793 213460 8a8a8bd85e7f4b6e33f42e14b9d88aae "xelatex"
+["xdvipdfmx"] 1562726466 "example.xdv" "example.pdf" "example" 1562726468
+  "example.xdv" 1562726466 213460 c83a9477c315205dafa2c865318f8ab9 "xelatex"
   (generated)
   "example.pdf"
-["xelatex"] 1562385791 "example.tex" "example.xdv" "example" 1562385796
+["xelatex"] 1562726463 "example.tex" "example.xdv" "example" 1562726468
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm" 1480098688 1616 371d1ee60c04b008c8fd760060cd34f1 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm" 1480098688 1804 7b5f73028f6509167f47ace9d69509ed ""
@@ -206,12 +206,12 @@
   "chap4.tex" 1562384764 1508 bef784e21efdaeca598f88afbbb2ce5d ""
   "chap5.tex" 1562385783 1516 20210a8712b20f924080e50c0fb6c98f ""
   "client_all.png" 1560525298 30686 0a5f63b60c0dee7f28fb0ad1cd5aa5a3 ""
-  "comment.cut" 1562385792 317 dbf424a2f8739f1cd6484fae56b5db95 ""
+  "comment.cut" 1562726465 317 dbf424a2f8739f1cd6484fae56b5db95 ""
   "connect1.png" 1562385658 182149 c0d32712679dce6a282b85903d0c63d5 ""
-  "connect2.png" 1562385656 152472 301f9ebaaa0e419049393dbb5862d2b7 ""
-  "example.aux" 1562385793 6704 06734d9d195f61a99d24487995f6a485 ""
-  "example.tex" 1562385340 2378 6c4a582cb6904605c165c04bf9dcaf5d ""
-  "example.toc" 1562385793 2571 5c8148014d8b8c486d1f16fcaaa71c98 ""
+  "connect2.png" 1562726351 149224 27da879be5b18f5361542ba001f42778 ""
+  "example.aux" 1562726466 6704 06734d9d195f61a99d24487995f6a485 ""
+  "example.tex" 1562726463 2377 4ae775810f1b27b9c2de5f179b27c041 ""
+  "example.toc" 1562726466 2571 5c8148014d8b8c486d1f16fcaaa71c98 ""
   "front.png" 1560526270 104362 d6a64276ca556791fac67c59ae490b0d ""
   "front_back.png" 1560525882 69147 8200c08c924386e944ce98e1662a85d0 ""
   "frontmatter.tex" 1547513832 1532 a83e31341dd925e6f2344e35df2c2af6 ""
@@ -226,6 +226,6 @@
   (generated)
   "comment.cut"
   "example.xdv"
-  "example.toc"
   "example.log"
+  "example.toc"
   "example.aux"

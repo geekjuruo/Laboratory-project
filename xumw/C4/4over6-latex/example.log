@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.12.6)  6 JUL 2019 12:03
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.12.6)  10 JUL 2019 10:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2092,7 +2092,7 @@ File: baidu.jpeg Graphic file (type bmp)
 Here is how much of TeX's memory you used:
  33843 strings out of 492970
  687889 string characters out of 6133938
- 895319 words of memory out of 5000000
+ 895318 words of memory out of 5000000
  37277 multiletter control sequences out of 15000+600000
  568611 words of font info for 143 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

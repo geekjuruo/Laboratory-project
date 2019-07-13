@@ -2,8 +2,8 @@
     <string name="app_name">THU_4over6_VPN</string>
 
     <!--初始界面-->
-    <string name="logo_name">THU 4over6 VPN</string>
-    <string name="workers">Made By   柳瑞阳、李映辉、曾军</string>
+    <string name="logo_name">4over6 VPN</string>
+    <string name="workers">Made By 李映辉、郭诚</string>
     <string name="address">服务器 IPV6 地址:</string>
     <string name="port">服务器端口号:</string>
     <string name="server_ip">2402:f000:4:72:808::9a47</string>
