@@ -3,6 +3,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import  AdaBoostClassifier
 from sklearn.naive_bayes import GaussianNB
@@ -25,6 +26,17 @@ for item in label_csv['label']:
 # print(label)
 
 featureTrain, featureTest, labelTrain, labelTest = train_test_split(feature, label, test_size = 0.2, random_state = 42)
+
+# SVM
+svmClf = SVC()
+svmClf.fit(featureTrain, labelTrain)
+svmResult = svmClf.predict(featureTest)
+
+svmAcc = 0
+for i in range(0, len(svmResult)):
+	if svmResult[i] == labelTest[i]:
+		svmAcc += 1
+print("SVM Accuracy:", (svmAcc*1.0)/len(labelTest))
 
 # KNN Classifier  
 knnClf = KNeighborsClassifier()
