@@ -23,55 +23,13 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection  import train_test_split
 
 # 基于端口号的分类。单分类器分类
+feature_csv = pd.read_csv("/data/CompletePCAP/flows_feature.csv")
+app_csv = pd.read_csv("/data/CompletePCAP/flows_label.csv")
 
-f = open('../../../data/pcap_20190613_new/0.pcap', 'rb')
-pcap = dpkt.pcap.Reader(f)
-
-
-def inet_to_str(inet):
-    try:
-        return socket.inet_ntop(socket.AF_INET,inet)
-    except:
-        return socket.inet_ntop(socket.AF_INET6,inet)
-
-feature_list = []
-num = 0
-for ts,buf in pcap:
-	feature =[]
-	num += 1
-	print(num)
-	ethData = dpkt.ethernet.Ethernet(buf) # 物理层
-	ipData = ethData.data # 网络层
-	transData = ipData.data # 传输层
-	appData = transData.data # 应用层
-	if num > 10000:
-		break
-	feature.append(transData.dport) # 每个包的属性列表暂时只添加包的目的端口号
-	feature_list.append(feature) # 通过dst port分析
-
-print("--------------------------------------")
-print("pcap dst port type num:", len(feature_list))
-
-port_official_csv = pd.read_csv("./service-names-port-numbers.csv")
-
-port_official_useful = {}
-for i in range(0, len(port_official_csv)):
-    if (port_official_csv['Service Name'][i] is not np.nan) and  (port_official_csv['Port Number'][i] is not np.nan):
-        port_official_useful[port_official_csv['Port Number'][i]] = port_official_csv['Service Name'][i]
-
-print("--------------------------------------")
-print("official useful port number:",len(port_official_useful))
-
+feature_list = feature_csv[['PacketTotalNum','DurationTime','PacketLenMean', 'PayloadLenMean', 'TimeGapMean']]
 app_list = []
-for i in range(0, len(feature_list)):
-	x = str(feature_list[i][0]) # 第一个属性为端口号
-	if (x in port_official_useful.keys()):
-		app_list.append(port_official_useful[x]) 
-	else:
-		app_list.append('unknown')
-
-print("--------------------------------------")
-print("label set num:",len(app_list))
+for i in app_csv['label']:
+	app_list.append(i)
 
 featureTrain, featureTest, appTrain, appTest = train_test_split(feature_list, app_list, test_size = 0.2, random_state = 42)
 
@@ -80,9 +38,11 @@ print(type(appTest))
 knnClf = KNeighborsClassifier()
 knnClf.fit(featureTrain, appTrain)
 knnResult = knnClf.predict(featureTest)
-
+print(type(knnResult))
 knnAcc = 0
 for i in range(0, len(knnResult)):
+	print(knnResult[i])
+	print(appTest[i])
 	if knnResult[i] == appTest[i]:
 		knnAcc += 1
 print("KNN Accuracy:", (knnAcc*1.0)/len(appTest))

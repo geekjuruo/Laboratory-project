@@ -10,7 +10,7 @@ import pandas as pd
 import os
 
 appNameList = []
-for root, dirs, files in os.walk('./'):  
+for root, dirs, files in os.walk('/data/CompletePCAP/'):  
     appNameList = files
 
 if '.DS_Store' in appNameList:
@@ -52,7 +52,7 @@ if __name__=="__main__":
     
     for i in appNameList:
         print("start read " + i )
-        pcap_path = './' + i
+        pcap_path = '/data/CompletePCAP/' + i
         f = open(pcap_path, 'rb')
         pcap = dpkt.pcap.Reader(f)
         for ts, buf in pcap:
